@@ -1,11 +1,11 @@
 import { User } from './user.js';
+import { HttpClient } from './helpers/httpClient.js';
     
 const form = document.querySelector("form");
-const issues = [];
 
 const initApp =() => {}
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const data = new FormData(form)
@@ -15,11 +15,10 @@ const initApp =() => {}
 
         const user = new User(email, caption, description)
 
-        issues.push(user);
+        const httpClient = new HttpClient();
+        const result = await httpClient.post('issues', user)
 
-        console.log(issues);
-
-
+        console.log('result', result);
     }
 
 
