@@ -8,11 +8,16 @@ const initApp = () => {
 
 
 const listAllIssues = async () => {
-    const httpClient = new HttpClient();
 
+    // setInterval(fetchIssues, 50)
+    fetchIssues()
+
+}
+
+const fetchIssues = async () => {
+    const httpClient = new HttpClient();
     const result = await httpClient.get('issues');
     displayIssue(result);
-    console.log(result)
 }
  
 const displayIssue = (issues) => {
