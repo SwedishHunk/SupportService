@@ -12,7 +12,6 @@ const initApp =() => {}
         const email = data.get('email')
         const caption = data.get('caption')
         const description = data.get('description')
-        console.log(email, caption, description)
 
         const user = new User(email, caption, description)
 
