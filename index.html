@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Service</title>
+    <script type="module" src="index.js"></script>
 </head>
 
 <body>
     <main>
         <form id="form">
-            <div><label for="email"></label>
-                <input type="email" name="email" id="email">Email</inpput></div>
-            <div><label for="caption"></label><input type="text" name="caption" id="caption"></inpput></div>
-            <div><label for="description"></label><textarea type="text" name="description" id="description"></textarea></div>
+            <div><label for="email">Email</label><input required type="email" name="email" id="email"></input></div>
+            <div><label for="caption">Caption</label><input required type="text" name="caption" id="caption"></input></div>
+            <div><label for="description">Ärende</label><textarea required type="text" name="description" id="description"></textarea></div>
             <div><button type="submit">Skicka</button></div>
         </form>
     </main>
